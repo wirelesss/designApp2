@@ -1,32 +1,34 @@
 //
-//  ViewController.swift
+//  VistaTipoQueso.swift
 //  PizzaOrden
 //
-//  Created by Rodrigo on 13/11/16.
+//  Created by Rodrigo on 14/11/16.
 //  Copyright © 2016 Rodrigo Hernandez. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController ,UIPickerViewDelegate ,UIPickerViewDataSource{
-
-
+class VistaTipoQueso: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
     @IBOutlet weak var pickerView: UIPickerView!
     
-    var intPickerDataSource: Int? = 0
-    var pickerDataSource: [String] = ["Chica", "Mediana", "Grande"]
-    var intSizePizza: Int? = 0
+    var intSizePizza:Int? = 0
+    var intTipoMasa:Int? = 0
+    var intTipoQueso:Int? = 0
+    
+    var pickerDataSource = ["Mozzarella", "Cheddar", "Parmesano", "Sin Queso"];
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.pickerView.dataSource = self;
         self.pickerView.delegate = self;
-        pickerView.selectRow(intSizePizza!, inComponent: 0, animated: false)
+        pickerView.selectRow(intTipoQueso!, inComponent: 0, animated: false)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let sigVista = segue.destinationViewController as! VistaTipoMasa
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+        let sigVista = segue.destinationViewController as! VistaIngredientes
         sigVista.intSizePizza = intSizePizza
+        sigVista.intTipoMasa = intTipoMasa
+        sigVista.intTipoQueso = intTipoQueso
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,6 +36,7 @@ class ViewController: UIViewController ,UIPickerViewDelegate ,UIPickerViewDataSo
         // Dispose of any resources that can be recreated.
     }
     
+
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -48,8 +51,7 @@ class ViewController: UIViewController ,UIPickerViewDelegate ,UIPickerViewDataSo
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        self.intSizePizza = row
+        self.intTipoQueso = row
     }
 
 }
-
