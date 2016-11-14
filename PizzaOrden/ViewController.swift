@@ -13,7 +13,6 @@ class ViewController: UIViewController ,UIPickerViewDelegate ,UIPickerViewDataSo
 
     @IBOutlet weak var pickerView: UIPickerView!
     
-    var intPickerDataSource: Int? = 0
     var pickerDataSource: [String] = ["Chica", "Mediana", "Grande"]
     var intSizePizza: Int? = 0
     

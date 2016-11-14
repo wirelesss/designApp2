@@ -86,11 +86,19 @@ class VistaIngredientes: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
-        let sigVista = segue.destinationViewController as! VistaTipoMasa
-        sigVista.intSizePizza = intSizePizza
-        sigVista.intTipoMasa = intTipoMasa
-        //+sigVista.intti
-        
+        let sigVista = segue.destinationViewController as! VistaConfirmacionEnvio
+        sigVista.intSizePizza = intSizePizza!
+        sigVista.intTipoMasa = intTipoMasa!
+        sigVista.intTipoQueso = intTipoQueso!
+        sigVista.boolJamon = boolJamon
+        sigVista.boolPepperoni = boolPepperoni
+        sigVista.boolPavo = boolPavo
+        sigVista.boolSalchicha = boolSalchicha
+        sigVista.boolAceituna = boolAceituna
+        sigVista.boolCebolla = boolCebolla
+        sigVista.boolPimiento = boolPimiento
+        sigVista.boolPiña = boolPiña
+        sigVista.boolAnchoa = boolAnchoa
     }
     
     
