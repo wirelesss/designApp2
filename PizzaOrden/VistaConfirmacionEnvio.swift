@@ -12,6 +12,43 @@ class VistaConfirmacionEnvio: UIViewController {
 
     @IBOutlet weak var descripcionPizza: UILabel!
     
+    var lastMessage:String = "Preparando su pizza..."
+
+
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let sigVista = segue.destinationViewController as! ViewController
+        sigVista.lastMessage = self.lastMessage
+        
+        // PARA BORRAR TODAS LAS VISTAS:
+        //if !self.lastMessage.isEmpty{
+        //self.navigationController!.viewControllers.removeAll()
+        
+        // PARA BORRAR TODAS LAS ANTERIORES
+        while(self.navigationController!.viewControllers.count>1){
+            self.navigationController!.viewControllers.removeAtIndex(0)
+        }
+        
+    }
+/*
+    func showNextController() {
+        var dataViewController = self.storyboard?.instantiateViewControllerWithIdentifier("IdentificadorSizePizza") as! ViewController?
+        dataViewController!.lastMessage = self.lastMessage
+        self.navigationController!.pushViewController(dataViewController!, animated:true)
+        */
+        
+        /*
+        let destinationController:ViewController = ViewController()
+        destinationController.lastMessage = self.lastMessage
+        self.presentViewController(destinationController, animated: true, completion: nil)
+        
+        
+        UIViewController *controller =  [self.storyboard instantiateViewControllerWithIdentifier:@"drivingDetails"];
+        controller.title = [[dao libraryItemAtIndex:indexPath.row] valueForKey:@"name"];
+        [self.navigationController pushViewController:controller animated:YES];
+        */
+    //}
+    
     var intSizePizza:Int = 0
     var intTipoMasa:Int = 0
     var intTipoQueso:Int = 0

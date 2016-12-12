@@ -10,7 +10,9 @@ import UIKit
 
 class ViewController: UIViewController ,UIPickerViewDelegate ,UIPickerViewDataSource{
 
-
+    @IBOutlet weak var labLastMessage: UILabel!
+    var lastMessage:String = ""
+    
     @IBOutlet weak var pickerView: UIPickerView!
     
     var pickerDataSource: [String] = ["Chica", "Mediana", "Grande"]
@@ -21,6 +23,12 @@ class ViewController: UIViewController ,UIPickerViewDelegate ,UIPickerViewDataSo
         self.pickerView.dataSource = self;
         self.pickerView.delegate = self;
         pickerView.selectRow(intSizePizza!, inComponent: 0, animated: false)
+        self.labLastMessage.text = self.lastMessage
+        
+        // BORRAR SOLO LA VISTA ANTERIOR
+        if(self.navigationController!.viewControllers.count>1){
+            self.navigationController!.viewControllers.removeAtIndex(0)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -10,6 +10,7 @@
 		F1A502541DD9A1B8009D7FA0 /* VistaIngredientes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A502531DD9A1B8009D7FA0 /* VistaIngredientes.swift */; };
 		F1A502581DD9B7D8009D7FA0 /* VistaConfirmacionEnvio.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A502571DD9B7D8009D7FA0 /* VistaConfirmacionEnvio.swift */; };
 		F1A5025A1DD9B7EC009D7FA0 /* VistaPreparacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A502591DD9B7EC009D7FA0 /* VistaPreparacion.swift */; };
+		F1B498E31DFE9010005563C2 /* InfoPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B498E21DFE9010005563C2 /* InfoPizza.swift */; };
 		F1C858441DD97A1000807984 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C858431DD97A1000807984 /* AppDelegate.swift */; };
 		F1C858461DD97A1000807984 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C858451DD97A1000807984 /* ViewController.swift */; };
 		F1C858491DD97A1000807984 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1C858471DD97A1000807984 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		F1A502531DD9A1B8009D7FA0 /* VistaIngredientes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaIngredientes.swift; sourceTree = "<group>"; };
 		F1A502571DD9B7D8009D7FA0 /* VistaConfirmacionEnvio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaConfirmacionEnvio.swift; sourceTree = "<group>"; };
 		F1A502591DD9B7EC009D7FA0 /* VistaPreparacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaPreparacion.swift; sourceTree = "<group>"; };
+		F1B498E21DFE9010005563C2 /* InfoPizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPizza.swift; sourceTree = "<group>"; };
 		F1C858401DD97A0F00807984 /* PizzaOrden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaOrden.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C858431DD97A1000807984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1C858451DD97A1000807984 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				F1A502531DD9A1B8009D7FA0 /* VistaIngredientes.swift */,
 				F1A502571DD9B7D8009D7FA0 /* VistaConfirmacionEnvio.swift */,
 				F1A502591DD9B7EC009D7FA0 /* VistaPreparacion.swift */,
+				F1B498E21DFE9010005563C2 /* InfoPizza.swift */,
 			);
 			path = PizzaOrden;
 			sourceTree = "<group>";
@@ -209,15 +212,18 @@
 					F1C8583F1DD97A0F00807984 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = H9BA59747H;
+						LastSwiftMigration = 0810;
 					};
 					F1C858531DD97A1000807984 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = H9BA59747H;
+						LastSwiftMigration = 0810;
 						TestTargetID = F1C8583F1DD97A0F00807984;
 					};
 					F1C8585E1DD97A1000807984 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = H9BA59747H;
+						LastSwiftMigration = 0810;
 						TestTargetID = F1C8583F1DD97A0F00807984;
 					};
 				};
@@ -278,6 +284,7 @@
 				F1A502581DD9B7D8009D7FA0 /* VistaConfirmacionEnvio.swift in Sources */,
 				F1C858461DD97A1000807984 /* ViewController.swift in Sources */,
 				F1A5025A1DD9B7EC009D7FA0 /* VistaPreparacion.swift in Sources */,
+				F1B498E31DFE9010005563C2 /* InfoPizza.swift in Sources */,
 				F1A502541DD9A1B8009D7FA0 /* VistaIngredientes.swift in Sources */,
 				F1C858441DD97A1000807984 /* AppDelegate.swift in Sources */,
 				F1E3E1491DD98CB4002F7452 /* VistaTipoQueso.swift in Sources */,
@@ -426,6 +433,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.org.PizzaOrden;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -437,6 +445,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.org.PizzaOrden;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -448,6 +457,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.org.PizzaOrdenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PizzaOrden.app/PizzaOrden";
 			};
 			name = Debug;
@@ -460,6 +470,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.org.PizzaOrdenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PizzaOrden.app/PizzaOrden";
 			};
 			name = Release;
@@ -471,6 +482,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.org.PizzaOrdenUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = PizzaOrden;
 				USES_XCTRUNNER = YES;
 			};
@@ -483,6 +495,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.org.PizzaOrdenUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = PizzaOrden;
 				USES_XCTRUNNER = YES;
 			};
